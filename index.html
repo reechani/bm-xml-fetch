@@ -2,29 +2,37 @@
 <html lang='en'>
 	<head>
 		<meta charset='utf-8' />
-		<!-- <title>Museum Release December 2014 items</title> -->
-		<!-- <title>Black Milk Museum Sale</title> -->
-		<title>Black Milk Cyber Sale 2015 items</title>
 		<style>
 		.limited {
 			color: #f00;
 		}
 		body {
 			padding-bottom: 2em;
+			background-color: #000;
+			color: #fff;
+			font-family: "Source Sans Pro","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 14px;
 		}
 		main {
 
 		}
 		.item-img {
+			background-color: #fff;
+			color: #000;
 			display: inline-block;
-			width: 220px;
+			width: 200px;
 			height: 340px;
 			padding: 5px;
 			margin: 5px;
-			text-align: center;
 			border-color: #eee;
 			border-right-style: solid;
 			border-right-width: 1px;
+			font-size: 12px;
+		}
+
+		.item-img a {
+			color: #000;
+			text-decoration: underline;
 		}
 
 		.item-img img {
@@ -33,15 +41,42 @@
 			height: 300px;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 3px;
+		}
+
+		.item-img .link {
+			float: left;
+			width: 142px;
+		}
+
+		.item-img span {
+			float: right;
+		}
+
+		.notice {
+			color: #00f;
+		}
+
+		#added {
+			color: #0a0;
+		}
+
+		#removed {
+			color: #b00;
+			font-style: italic;
 		}
 
 		</style>
 	</head>
 	<body>
-		<!-- <h1>Black Milk Museum Release December 2014 items</h1> -->
-		<!-- <h1>Black Milk Museum Sale items</h1> -->
-		<h1>Black Milk Cyber Sale 2015 items</h1>
-		<p>Items are unconfirmed and will always be subject to change. The items have been fetched based on the XML-code for the product, where it contains <em>"Cyber_Sale_2015"</em>. Red items are LIMITED.</p>
+		<p>Items are unconfirmed and will always be subject to change. The items have been fetched based on the XML-code for the product, where it contains <em id='tag'></em>. Red items are LIMITED.
+		</p>
+		<details id='added'>
+			<summary>Added</summary>
+		</details>
+		<details id='removed'>
+			<summary>removed</summary>
+		</details>
 		<main>
 		</main>
 		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
